@@ -20,7 +20,7 @@ async function gerarCurriculo(event) {
   document.getElementById('curriculo').innerHTML = "<p>Gerando currículo com IA...</p>";
 
   try {
-    const response = await fetch('https://aula-18-projeto-receita.vercel.app/', {
+    const response = await fetch('https://aula-18-projeto-receita.vercel.app', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ informacoes })
