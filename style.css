@@ -525,7 +525,6 @@
   .resume-content h2:nth-of-type(4) { animation-delay: 0.4s; }
   .resume-content h2:nth-of-type(5) { animation-delay: 0.5s; }
 
-  /* Estiliza a visualização do currículo */
 
 #curriculo h1, #curriculo h2, #curriculo h3 {
   color: var(--color-primary);
