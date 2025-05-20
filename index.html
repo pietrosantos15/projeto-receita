@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Currículo Profissional</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="logo">
+        <div class="logo-icon"></div>
+        <h1>Gerador de Currículo</h1>
+      </div>
+      <p class="tagline">Crie seu currículo em minutos com IA</p>
+    </header>
+
+    <main class="app-content">
+      <section class="form-container">
+        <h2>Preencha seus dados</h2>
+        <form id="resumeForm" onsubmit="gerarCurriculo(event)">
+          <div class="form-section">
+            <h3>Dados Pessoais</h3>
+            <div class="form-group">
+              <label for="nome">Nome completo</label>
+              <input id="nome" placeholder="Ex: João Silva" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="Ex: joao.silva@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone</label>
+              <input id="telefone" placeholder="Ex: (11) 98765-4321" required>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Perfil Profissional</h3>
+            <div class="form-group">
+              <label for="objetivo">Objetivo profissional</label>
+              <input id="objetivo" placeholder="Ex: Busco oportunidades na área de marketing digital" required>
+            </div>
+            <div class="form-group">
+              <label for="area">Área de atuação</label>
+              <input id="area" placeholder="Ex: Marketing Digital" required>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Formação &amp; Experiência</h3>
+            <div class="form-group">
+              <label for="formacoes">Formação acadêmica</label>
+              <textarea id="formacoes" placeholder="Ex: Bacharel em Marketing - Universidade XYZ (2018-2022)" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="experiencias">Experiência profissional</label>
+              <textarea id="experiencias" placeholder="Ex: Analista de Marketing - Empresa ABC (Jan 2022 - Atual)" required></textarea>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Habilidades</h3>
+            <div class="form-group">
+              <label for="tecnicas">Habilidades técnicas</label>
+              <textarea id="tecnicas" placeholder="Ex: SEO, Google Analytics, WordPress" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="interpessoais">Habilidades interpessoais</label>
+              <textarea id="interpessoais" placeholder="Ex: Comunicação, trabalho em equipe, liderança" required></textarea>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Qualificações Adicionais</h3>
+            <div class="form-group">
+              <label for="idiomas">Idiomas</label>
+              <input id="idiomas" placeholder="Ex: Inglês (Fluente), Espanhol (Intermediário)" required>
+            </div>
+            <div class="form-group">
+              <label for="certificacoes">Certificações</label>
+              <textarea id="certificacoes" placeholder="Ex: Google Ads (2023), HubSpot Inbound Marketing (2022)" required></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-button">
+            <span class="button-text">Gerar Currículo</span>
+            <span class="button-icon"></span>
+          </button>
+        </form>
+      </section>
+
+      <section class="preview-container">
+        <div class="preview-header">
+          <h2>Visualização do Currículo</h2>
+          <button id="printButton" class="print-button" onclick="window.print()">Imprimir</button>
+        </div>
+        <div id="curriculo" class="resume-preview"></div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p> Gerador de Currículo através da IA do Gemini. Feito por: Pietro Freire Rezende dos Santos | &copy; 2025  </p>
+    </footer>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
